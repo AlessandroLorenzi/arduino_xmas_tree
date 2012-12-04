@@ -40,16 +40,16 @@ class Arduino():
 
 	def sendon(self, message):
 		from time import sleep
-		print("siamo in ON")	
-		print(str(int(message)-(int(message)/10*10) ))
+		#print("siamo in ON")	
+		#print(str(int(message)-(int(message)/10*10) ))
 		self.s[int(message)/10].write(str(int(message)-(int(message)/10*10) ))
 		sleep(0.2)
 		
 
 	def sendoff(self, message):
 		from time import sleep
-		print("siamo in OFF")	
-		print(str(int(message)-(int(message)/10*10)+100))
+		#print("siamo in OFF")	
+		#print(str(int(message)-(int(message)/10*10)+100))
 		self.s[int(message)/10].write(str(int(message)-(int(message)/10*10)+100))
 		sleep(0.2)
 		
