@@ -17,3 +17,13 @@ la classe python gestisce tutto il pool di arduini come se fosse uno
 solo, in maniera totalmente trasparente.
 
 Comodo :)
+
+
+
+
+       *
+      ***
+     *****
+    *******
+   *********
+      | |
