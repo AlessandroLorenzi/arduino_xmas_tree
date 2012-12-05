@@ -3,6 +3,9 @@
 class conf():
 	arduini = ['/dev/ttyACM0', '/dev/ttyACM1']
 
+	twitter_hashtag=["#hashtag"]
+
+
 	
 	# twitter_keys
 	CONSUMER_KEY=''

@@ -6,11 +6,10 @@ from conf import conf
 		
 class StdOutListener(tweepy.StreamListener):
 	a=Arduino(conf.arduini)
-	#a=Arduino(['/dev/ttyACM1'])
 
 	def on_data(self, data):
 		d = json.loads(data)
-		print d['user']['screen_name'] + " -  " + d['text']
+		#print d['user']['screen_name'] + " -  " + d['text']
 		self.a.decode(d['text'])
 		return True
 
@@ -33,5 +32,5 @@ api = tweepy.API(auth)
 
 l = StdOutListener()
 stream = tweepy.Stream(auth,l)
-stream.filter(track=['#Arduino'])
+stream.filter(track=conf.twitter_hashtag)
 
